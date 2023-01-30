@@ -1,5 +1,5 @@
 locals {
-  prefix = "${organization}-${environment}-${application}"
+  prefix = "${var.organization}-${var.environment}-${var.application}"
 }
 
 resource "azurerm_resource_group" "example" {
