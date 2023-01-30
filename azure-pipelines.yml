@@ -28,6 +28,9 @@ stages:
   - stage: Deploy
     jobs:
       - job: Deploy_Job
+        pool:
+         name: Default
+         demands: vm
         steps:
         - task: DownloadBuildArtifacts@1
           displayName: Download Build Artifacts
